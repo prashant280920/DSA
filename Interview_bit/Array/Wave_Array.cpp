@@ -2,7 +2,7 @@
 using namespace std;
 
 // Pseudo Code
-//  First sort the input array, then swap all adjacent elements.
+// First sort the input array, then swap all adjacent elements.
 
 
 int main(){
