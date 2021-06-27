@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     string A;
     cin >>A;
-    int val = 0,n = A.length(), start=-1,end=-1 ,k=0, max_sum = 0, max_loop = 0;
+    int n = A.length(), start=-1,end=-1 ,k=0, max_sum = 0, max_loop = 0;
     for(int i=0; i<n; i++){
         int val = (A[i]=='1')?-1:1;
         max_loop = max_loop + val;
