@@ -44,7 +44,7 @@ int main(){
             }
         }
         else{
-            cout << "third ";
+            //cout << "third ";
             vector<int> temp(B);
             for(int i=B-1; i>=0; i--){
                 temp[i] = C%10;
