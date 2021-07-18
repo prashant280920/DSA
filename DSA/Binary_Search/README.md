@@ -17,21 +17,17 @@ BINARY SEARCH(arr, x)
     means element not found
 </pre>
 
-2. Time Complexity
-* O(log2 N)
+2. Time Complexity - <b>O(log2 N)</b>
 
 3. Space Complexity - <b>O(1)</b>
 
-4. Key Point
-Binary search obviously works on searching for elements in a sorted array. But if you think about the reason why it works is because the array itself is monotonic ( either increasing or decreasing ). So, if you are a particular position, you can make a definite call whether the answer lies in the left part of the position or the right part of it.
-
+4. Key Point<br>
+Binary search obviously works on searching for elements in a sorted array. But if you think about the reason why it works is because the array itself is monotonic ( either increasing or decreasing ). So, if you are a particular position, you can make a definite call whether the answer lies in the left part of the position or the right part of it.<br>
 Similar thing can be done with monotonic functions ( monotonically increasing or decreasing ) as well.
-Lets say we have f(x) which increases when x increases.
-
-So, given a problem of finding x so that `f(x) = p`, I can do a binary search for x.
-
+Lets say we have f(x) which increases when x increases.<br>
+So, given a problem of finding x so that `f(x) = p`, I can do a binary search for x.<br>
 At any instance,
-1. if `f(current_position) > p`, then I will search for values lower than current_position.
-2. if `f(current_position) < p`, then I will search for values higher than current_position
-3. if `f(current_position) = p`, then I have found my answer.
+-  if `f(current_position) > p`, then I will search for values lower than current_position.
+- if `f(current_position) < p`, then I will search for values higher than current_position
+- if `f(current_position) = p`, then I have found my answer.
 
