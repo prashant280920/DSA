@@ -34,42 +34,43 @@ void print(ListNode* head){
 
 int main(){
     ListNode* A = NULL;
-    ListNode* B = NULL;
     int n,s;
     cin >> n;
     for(int i=0; i<n; i++){
         cin >> s;
         append(&A,s);
     }
-    cin >> n;
-    for(int i=0; i<n; i++){
-        cin >> s;
-        append(&B,s);
-    }
-    cout << "Input List 1: ";
+    int B;
+    cin >> B;
+    cout << "Input List: ";
     print(A);
-    cout << "Input List 2: ";
-    print(B);
-    ListNode* temp = new ListNode(-1);
-    ListNode* C = temp;
-    while(A && B){
-        if(A->val<B->val){
-            temp->next = A;
-            temp = temp->next;
-            A = A->next;
-        }else{
-            temp->next = B;
-            temp = temp->next;
-            B = B->next;
+    
+    ListNode* first = A;
+    ListNode* second = A;
+    for(int i=1; i<B; i++){
+        //cout << 1;
+        if(second == NULL || second->next==NULL){
+            cout << "Output List: ";
+            print(A->next);
+            return 0;
         }
+        second = second->next;  
     }
-    if(B){
-        temp->next = B;
+    ListNode* prev=first;
+    while(second->next){
+        prev = first;
+        first = first->next;
+        second = second->next;
     }
-    if(A){
-        temp->next = A;
+    if(first == A){
+        cout << "Output List: ";
+        print(A->next);
+        return 0;
     }
+    prev->next = first->next;
+    first->next = NULL;
+    
     cout << "Output List: ";
-    print(C->next);    
+    print(A);
     return 0;
 }
