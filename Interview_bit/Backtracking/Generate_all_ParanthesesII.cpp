@@ -29,7 +29,6 @@ int main(){
     vector<string> ans;
     
     if (A>0) paranUtil(A, 0, 0, "", ans);
-    //return ans;
     for(auto i: ans) cout<<i<<"\n"; 
     return 0;
 }
