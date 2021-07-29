@@ -52,7 +52,7 @@ BUBBLE_SORT(A)
 ### Heap Sort
 1. Pseudo Code
 <pre>
-Heapify(A,index,array_len)
+HEAPIFY(A,index,array_len)
     largest = index, left_child=2*index+1, right_child = 2*index+2;
     if A[left_child]>A[largest] then: largest = left_child
     if A[right_child]>A[largest] then: largest = right_child
@@ -60,7 +60,7 @@ Heapify(A,index,array_len)
     recursevily check at new largest index:  Heapify(A,largest,array_len)
 </pre>
 <pre>
-HeapSort(A,n)
+HEAP_SORT(A,n)
     for n/2 index to 0: create heap using Heapify(A,i,n)
     for n-1 to 0: 
     swap(A[0],A[i]);
