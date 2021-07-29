@@ -61,10 +61,11 @@ HEAPIFY(A,index,array_len)
 </pre>
 <pre>
 HEAP_SORT(A,n)
-    for n/2 index to 0: create heap using Heapify(A,i,n)
+    for n/2 index to 0: 
+        create heap using Heapify(A,i,n)
     for n-1 to 0: 
-    swap(A[0],A[i]);
-    maintain heap for i length of array using Heapify(A,0,i)
+        swap(A[0],A[i]);
+        maintain heap for i length of array using Heapify(A,0,i)
 </pre>
 
 2. Time Complexity :

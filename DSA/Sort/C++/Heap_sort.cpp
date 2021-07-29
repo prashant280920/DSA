@@ -11,10 +11,11 @@ using namespace std;
 //     recursevily check at new largest index:  Heapify(A,largest,array_len)
 
 // HeapSort(A,n)
-//     for n/2 index to 0: create heap using Heapify(A,i,n)
+//     for n/2 index to 0: 
+//          create heap using Heapify(A,i,n)
 //     for n-1 to 0: 
-//     swap(A[0],A[i]);
-//     maintain heap for i length of array using Heapify(A,0,i)
+//          swap(A[0],A[i]);
+//          maintain heap for i length of array using Heapify(A,0,i)
 
 
 // Time Complexity :
