@@ -31,11 +31,33 @@ int main(){
            \  /
            5 3
     */
-
+    cout << "        1\n";
+    cout << "       /  \\\n";
+    cout << "      6    2\n";
+    cout << "       \\  /\n";
+    cout << "       5 3\n"; 
+    
     vector<int> ans;
     preOrder(A,ans);
-    
+    cout << "Recursive Solution: \n";
     for(auto i: ans) cout << i<< " ";
-    cout << endl;
+    cout << "\n";
+
+    stack<TreeNode* > s;
+    ans = {};
+    while(s.size() || A!=NULL){
+        if(A!=NULL){
+            ans.push_back(A->val);
+            s.push(A);
+            A = A->left;
+        }else{
+            A = s.top()->right;
+            s.pop();
+        }
+        
+    }
+    cout << "Iterative Solution: \n";
+    for(auto i: ans) cout << i<< " ";
+    cout << "\n";
     return 0;
 }
