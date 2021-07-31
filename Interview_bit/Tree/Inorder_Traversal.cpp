@@ -9,6 +9,14 @@ class TreeNode{
     TreeNode(int x): val(x), left(NULL), right(NULL){}
 };
 
+void inorder(TreeNode* A, vector<int> &ans){
+    if(A==NULL) return;
+    
+    inorder(A->left, ans);
+    //cout << A->val;
+    ans.push_back(A->val);
+    inorder(A->right, ans);
+}
 
 
 int main(){
@@ -26,6 +34,12 @@ int main(){
            5 3
     */
 
+    cout << "        1\n";
+    cout << "       /  \\\n";
+    cout << "      6    2\n";
+    cout << "       \\  /\n";
+    cout << "       5 3\n"; 
+    TreeNode* B = A;
     stack<TreeNode* > s;
     vector<int> ans;
     while(s.size()!=0 || A!=NULL){
@@ -38,7 +52,15 @@ int main(){
             s.pop();
         }
     }
+    cout << "Iterative Solution:\n";
     for(auto i: ans) cout << i<< " ";
     cout << endl;
+
+    ans = {};
+    inorder(B,ans);
+    cout << "Recursive Solution:\n";
+    for(auto i: ans) cout << i<< " ";
+    cout << endl;
+    
     return 0;
 }
