@@ -1,32 +1,33 @@
-# Prerequisites
-*.d
+.vscode/settings.json
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Ignore all
+*
 
-# Precompiled Headers
-*.gch
-*.pch
+# Unignore all with extensions
+!*.*
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Unignore all dirs
+!*/
 
-# Fortran module files
-*.mod
-*.smod
+### Above combination will ignore all files without extension ###
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Ignore files with extension `.class` & `.sm`
+*.class
+*.sm
 
-# Executables
-*.exe
-*.out
-*.app
+# Ignore `bin` dir
+bin/
+# or
+*/bin/*
+
+# Unignore all `.jar` in `bin` dir
+!*/bin/*.jar
+
+# Ignore all `library.jar` in `bin` dir
+*/bin/library.jar
+
+# Ignore a file with extension
+relative/path/to/dir/filename.extension
+
+# Ignore a file without extension
+relative/path/to/dir/anotherfile
