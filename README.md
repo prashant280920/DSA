@@ -1,4 +1,4 @@
 # Interview Bit Solution
 
-Repo for storing all my interview bit solution and also storing some common DSA algo.<br>
-However I not wrote all common DSA algos 😆😅 bcz I focusing on some standard problems that I solved in interviewBit.
+Repo for storing all my interviewbit solutions and also storing some commonly used DSA algo.<br>
+However, I have not written all common DSA algos 😆😅 as I am focusing on some standard problems that I have solved in interviewBit.
