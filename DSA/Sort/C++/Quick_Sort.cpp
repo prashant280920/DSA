@@ -1,37 +1,50 @@
-// * Pseudo Code
-  //quickSort(arr, beg, end)
-  //   if (beg < end)
-  //     pivotIndex = partition(arr,beg, end)
-  //     quickSort(arr, beg, pivotIndex)
-  //     quickSort(arr, pivotIndex + 1, end)
-
-  // partition(arr, beg, end)
-  //   set end as pivotIndex
-  //   pIndex = beg - 1
-  //   for i = beg to end-1
-  //   if arr[i] < pivot
-  //     swap arr[i] and arr[pIndex]
-  //     pIndex++
-  //   swap pivot and arr[pIndex+1]
-  // return pIndex + 1
-
-
-
-// * Quick Sort Time Complexity
-  // Partition of elements take n time
-  // And in quicksort problem is divide by the factor 2
-  // Best Time Complexity : O(nlogn)
-  // Average Time Complexity : O(nlogn)
-  // Worst Time Complexity : O(n^2)
-  // Worst Case will happen when array is sorted
-
-
-
-// C++ implementation QuickSort
-// using Lomuto's partition Scheme.
 #include <cstdlib>
 #include <iostream>
 using namespace std;
+
+// 1. Pseudo Code
+//   quickSort(arr, beg, end)
+//     if (beg < end)
+//       pivotIndex = partition(arr,beg, end)
+//       quickSort(arr, beg, pivotIndex)
+//       quickSort(arr, pivotIndex + 1, end)
+
+//   partition(arr, beg, end)
+//     set end as pivotIndex
+//     pIndex = beg - 1
+//     for i = beg to end-1
+//     if arr[i] < pivot
+//       swap arr[i] and arr[pIndex]
+//       pIndex++
+//     swap pivot and arr[pIndex+1]
+//   return pIndex + 1
+
+
+
+//  2. Time Complexity
+//    * Partition of elements - <b>O(n)</b>
+//    * Best Time Complexity - <b>O(nlogn)</b>
+//    * Average Time Complexity : <b>O(nlogn)</b>
+//    * Worst Time Complexity : <b>O(n^2)</b>
+//    Worst Case will happen when array is sorted
+
+// 3. Space Complexity 
+//    * It is an Inplace algorithm
+//    * Hence require <b>O(1) space</b>
+
+// 4. Key Points
+//    * Divide and Conquer Algorithm
+//    * There are different Quick Sort based on pivots.
+//         1. Always pick first element as pivot.
+//         2. Always pick last element as pivot (implemented below)
+//         3. Pick a random element as pivot.
+//         4. Pick median as pivot. 
+//    * Default Quick Sort is <b>not stable</b>. But can be implemented
+//    * It is an <b>inplace algorithm</b>
+//    * It is <b>not an Adaptive sort</b>.
+
+
+
 
 // This function takes last element
 // as pivot, places

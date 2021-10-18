@@ -2,27 +2,30 @@
 #include <iostream>
 using namespace std;
 
-// Pseudo Code:
-// MergeSort(arr[], l,  r)
-// If r > l
-//      1. Find the middle point to divide the array into two halves:  
-//              middle m = l+ (r-l)/2
-//      2. Call mergeSort for first half:   
-//              Call mergeSort(arr, l, m)
-//      3. Call mergeSort for second half:
-//              Call mergeSort(arr, m+1, r)
-//      4. Merge the two halves sorted in step 2 and 3:
-//              Call merge(arr, l, m, r)
+// 1. Pseudo Code:
+//  MergeSort(arr[], l,  r)
+//  If r > l
+//       1. Find the middle point to divide the array into two halves:  
+//               middle m = l+ (r-l)/2
+//       2. Call mergeSort for first half:   
+//               Call mergeSort(arr, l, m)
+//       3. Call mergeSort for second half:
+//               Call mergeSort(arr, m+1, r)
+//       4. Merge the two halves sorted in step 2 and 3:
+//               Call merge(arr, l, m, r)
 
+// 2. Time Complexity
+//   * Best Case - <b>O(nlogn)</b>
+//   * Average Case - <b>O(nlogn)</b>
+//   * Worst Case - <b>O(nlogn)</b>
 
-//  Time Complexity
-// * Worst Case : {Big-O} O(nlogn)
-// * Space Complexity - O(n)
+// 3. Space Complexity - <b>O(n)</b>
 
-// Key Point
-// * Merge Sort is a divide and conquer algorithm.
-// * Merge Sort is useful for sorting linked lists.
-// * Merge Sort is a stable sort which means that the same element in an array maintain their original positions with respect to each other.
+// 4. Key Point
+//   * Divide and Conquer algorithm.
+//   * Merge Sort is useful for sorting linked lists.
+//   * It is a <b>stable sort</b> 
+//   * It is <b>not an adaptive sort</b>
 
 
 
